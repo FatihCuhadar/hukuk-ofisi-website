@@ -211,12 +211,19 @@ body {
     box-shadow: var(--shadow-md);
 }
 
+/* Mobile menu toggle - sadece mobilde görünür */
 .mobile-menu-toggle {
     display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    z-index: 1001;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 1001;
+    }
 }
 
 .mobile-menu-toggle span {
@@ -241,9 +248,8 @@ body {
 
 /* ==================== HERO SECTION ==================== */
 .hero {
-    flex: 1;
-    min-height: 400px;
-    padding: 6rem 0 4rem;
+    min-height: 70vh;
+    padding: 4rem 0;
     position: relative;
     display: flex;
     align-items: center;
@@ -251,7 +257,7 @@ body {
     background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 .hero-overlay {
@@ -268,26 +274,27 @@ body {
     z-index: 10;
     text-align: center;
     color: var(--white);
-    max-width: 850px;
+    max-width: 900px;
+    margin: 0 auto;
     padding: 0 20px;
     animation: fadeInUp 1s ease-out;
 }
 
 .hero-title {
     font-family: var(--font-heading);
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 800;
-    margin-bottom: 1.2rem;
-    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
     text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 300;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     line-height: 1.7;
-    max-width: 700px;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
     opacity: 0.95;
@@ -617,13 +624,13 @@ body {
 }
 
 .footer-main {
-    padding: 3rem 0 1.5rem;
+    padding: 2rem 0 1rem;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
 }
 
 .footer-col {
@@ -634,33 +641,33 @@ body {
 .footer-logo {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 0.7rem;
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
 }
 
 .footer-logo i {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--gold);
 }
 
 .footer-description {
     color: rgba(255, 255, 255, 0.8);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+    font-size: 0.85rem;
 }
 
 .footer-social {
     display: flex;
-    gap: 0.7rem;
+    gap: 0.6rem;
 }
 
 .footer-social-link {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
     display: flex;
@@ -669,19 +676,19 @@ body {
     color: var(--white);
     text-decoration: none;
     transition: var(--transition);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .footer-social-link:hover {
     background-color: var(--gold);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
 .footer-title {
     font-family: var(--font-heading);
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     color: var(--gold);
 }
 
@@ -691,8 +698,8 @@ body {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
-    font-size: 0.9rem;
+    gap: 0.5rem;
+    font-size: 0.85rem;
 }
 
 .footer-links a,
@@ -712,32 +719,32 @@ body {
 }
 
 .footer-links i {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     color: var(--gold);
 }
 
 .footer-posts i {
     color: var(--gold);
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .footer-contact li {
     display: flex;
-    gap: 1rem;
+    gap: 0.8rem;
     color: rgba(255, 255, 255, 0.8);
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 .footer-contact i {
     color: var(--gold);
-    font-size: 1rem;
-    margin-top: 0.2rem;
+    font-size: 0.9rem;
+    margin-top: 0.15rem;
     flex-shrink: 0;
 }
 
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 1.2rem 0;
+    padding: 0.8rem 0;
 }
 
 .footer-bottom-content {
@@ -745,12 +752,12 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.8rem;
 }
 
 .footer-bottom-content p {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .footer-bottom-links {
@@ -762,7 +769,7 @@ body {
 .footer-bottom-links a {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     transition: var(--transition);
 }
 
@@ -776,8 +783,16 @@ body {
 
 /* ==================== RESPONSIVE DESIGN ==================== */
 @media (max-width: 992px) {
+    .hero {
+        min-height: 60vh;
+    }
+    
     .hero-title {
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.05rem;
     }
     
     .section-title {
@@ -786,6 +801,10 @@ body {
     
     .services-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -847,8 +866,8 @@ body {
     
     /* Hero */
     .hero {
-        min-height: 400px;
-        padding: 4rem 0 3rem;
+        min-height: 50vh;
+        padding: 3rem 0;
     }
     
     .hero-title {
@@ -939,11 +958,11 @@ body {
     /* Footer */
     .footer-grid {
         grid-template-columns: 1fr;
-        gap: 1.8rem;
+        gap: 1.5rem;
     }
     
     .footer-main {
-        padding: 2.5rem 0 1.2rem;
+        padding: 2rem 0 1rem;
     }
     
     .footer-bottom-content {
@@ -962,8 +981,8 @@ body {
     }
     
     .hero {
-        min-height: 350px;
-        padding: 3rem 0 2.5rem;
+        min-height: 45vh;
+        padding: 2.5rem 0;
     }
     
     .hero-title {
@@ -2013,28 +2032,28 @@ body {
 
 /* Footer Trust Section */
 .footer-trust {
-    margin: 1.5rem 0;
+    margin: 1rem 0;
 }
 
 .trust-list {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 0.5rem;
 }
 
 .trust-list li {
     display: flex;
     align-items: center;
-    gap: 0.7rem;
+    gap: 0.6rem;
     color: rgba(255, 255, 255, 0.9);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
 }
 
 .trust-list i {
     color: var(--gold);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 /* ==================== CONTACT PAGE ==================== */
