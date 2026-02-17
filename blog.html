@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog - Güncel Hukuki Makaleler ve Haberler">
-    <title>Blog - Hukuk & Danışmanlık Ofisi</title>
-    
+    <meta name="description" content="Hukuki Blog - Güncel Yargıtay Kararları ve Makaleler">
+    <title>Blog - Güzeler Hukuk & Danışmanlık</title>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
             <div class="top-bar-content">
                 <div class="top-bar-left">
-                    <a href="mailto:info@hukukofisi.com" class="top-bar-link">
+                    <a href="mailto:av.asguzeler@gmail.com" class="top-bar-link">
                         <i class="fas fa-envelope"></i>
-                        <span>info@hukukofisi.com</span>
+                        <span>av.asguzeler@gmail.com</span>
                     </a>
-                    <a href="tel:+902125551234" class="top-bar-link">
+                    <a href="tel:+905312172171" class="top-bar-link">
                         <i class="fas fa-phone"></i>
-                        <span>+90 (212) 555 12 34</span>
+                        <span>+90 (531) 217 2171</span>
                     </a>
                 </div>
                 <div class="top-bar-right">
-                    <a href="#" class="social-icon" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="social-icon" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="social-icon" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
@@ -53,8 +51,8 @@
             <div class="header-content">
                 <div class="logo">
                     <a href="index.html">
-                        <i class="fas fa-balance-scale"></i>
-                        <span>HUKUK & DANIŞMANLIK</span>
+                        <img src="hukuk-logo.jpeg" alt="Güzeler Hukuk Logo" class="logo-img">
+                        <span>GÜZELER HUKUK & DANIŞMANLIK</span>
                     </a>
                 </div>
                 <nav class="nav" id="mainNav">
@@ -66,7 +64,7 @@
                         <li class="nav-item"><a href="iletisim.html" class="nav-link">İletişim</a></li>
                     </ul>
                 </nav>
-                <a href="iletisim.html" class="btn-appointment">Randevu Al</a>
+                <a href="vekalet.html" class="btn-appointment">Nasıl Vekalet Verebilirim?</a>
                 <div class="mobile-menu-toggle" id="mobileMenuToggle">
                     <span></span>
                     <span></span>
@@ -77,279 +75,184 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
-        <div class="page-header-overlay"></div>
+    <section class="about-hero">
         <div class="container">
-            <div class="page-header-content">
-                <h1 class="page-title">Güncel Makaleler</h1>
-                <div class="breadcrumb">
-                    <a href="index.html">Anasayfa</a>
-                    <span>/</span>
-                    <span>Blog</span>
-                </div>
+            <div class="about-hero-content">
+                <h1 class="about-hero-title">Güncel Hukuki Gelişmeler</h1>
+                <p class="about-hero-description">
+                    Emsal Yargıtay kararları ve güncel hukuki makalelerimizle haklarınızı yakından takip edin.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Blog Grid -->
-    <section class="blog-section">
+    <!-- Blog Grid - Modernized -->
+    <section class="blog-section-modern">
         <div class="container">
-            <div class="blog-grid">
-                <!-- Blog Card 1 -->
-                <!-- Her yeni blog yazısı için bu kartı kopyalayın ve içeriği değiştirin -->
-                <article class="blog-card">
-                    <a href="blog-detail.html" class="blog-image-link">
-                        <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" alt="Boşanma Davalarında Nafaka Hakları">
-                            <span class="blog-category-tag">Aile Hukuku</span>
-                        </div>
-                    </a>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="far fa-calendar-alt"></i>
-                                15 Ocak 2024
-                            </span>
-                            <span class="blog-author">
-                                <i class="far fa-user"></i>
-                                Av. Ahmet Yılmaz
-                            </span>
-                        </div>
-                        <h2 class="blog-title">
-                            <a href="blog-detail.html">Boşanma Davalarında Nafaka Hakları ve Hesaplama Yöntemleri</a>
-                        </h2>
-                        <p class="blog-excerpt">
-                            Boşanma sürecinde nafaka hakları, tarafların ekonomik durumları ve çocukların 
-                            ihtiyaçları göz önünde bulundurularak belirlenir.
+            <div class="blog-grid-modern">
+                <!-- Blog 1 -->
+                <article class="blog-card-modern">
+                    <span class="blog-badge-modern cat-sigorta">Sigorta Hukuku</span>
+                    <div class="blog-body-modern">
+                        <h2 class="blog-title-modern">Resen Araştırılması Gereken Konuda Bilirkişi Raporuna İtiraz
+                            Edilmemesi</h2>
+                        <p class="blog-excerpt-modern">
+                            Resen araştırılması gereken bir konuda davalının eksik bilgi ve belgeler üzerinden verilmiş
+                            bilirkişi raporuna itiraz etmemesi karşı taraf lehine kazanılmış hak doğurmaz.
                         </p>
-                        <a href="blog-detail.html" class="blog-read-more">
-                            Devamını Oku
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
+                        <div class="blog-footer-modern">
+                            <div class="blog-info-modern">
+                                <span><i class="far fa-calendar-alt"></i> 28 Mayıs 2025</span>
+                                <span><i class="fas fa-file-invoice"></i> HGK 2024/250 E., 2025/354 K.</span>
+                            </div>
+                            <a href="blog-detail.html?id=1" class="blog-btn-modern">Kararı İncele</a>
+                        </div>
                     </div>
                 </article>
 
-                <!-- Blog Card 2 -->
-                <article class="blog-card">
-                    <a href="blog-detail.html" class="blog-image-link">
-                        <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80" alt="İş Sözleşmelerinde Dikkat Edilmesi Gerekenler">
-                            <span class="blog-category-tag">İş Hukuku</span>
-                        </div>
-                    </a>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="far fa-calendar-alt"></i>
-                                12 Ocak 2024
-                            </span>
-                            <span class="blog-author">
-                                <i class="far fa-user"></i>
-                                Av. Ayşe Demir
-                            </span>
-                        </div>
-                        <h2 class="blog-title">
-                            <a href="blog-detail.html">İş Sözleşmelerinde Dikkat Edilmesi Gereken Önemli Maddeler</a>
-                        </h2>
-                        <p class="blog-excerpt">
-                            İş sözleşmesi imzalamadan önce hangi maddelere dikkat etmelisiniz? 
-                            İşçi ve işveren hakları konusunda temel noktalar.
+                <!-- Blog 2 -->
+                <article class="blog-card-modern">
+                    <span class="blog-badge-modern cat-kira">Kira Hukuku</span>
+                    <div class="blog-body-modern">
+                        <h2 class="blog-title-modern">Kira Sözleşmesi Sırasında Verilen Taahüt ve Geçerliliği</h2>
+                        <p class="blog-excerpt-modern">
+                            Kira sözleşmesi sırasında verilen taahüt geçerli değilse de kiraya verene gönderilen cevabi
+                            ihtarname ile değerlendirme yapıldığında taahhüdün serbest irade ile verildiğine kanaat
+                            getirilmelidir.
                         </p>
-                        <a href="blog-detail.html" class="blog-read-more">
-                            Devamını Oku
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
+                        <div class="blog-footer-modern">
+                            <div class="blog-info-modern">
+                                <span><i class="far fa-calendar-alt"></i> 18 Haziran 2025</span>
+                                <span><i class="fas fa-file-invoice"></i> 3. HD 2024/4396 E., 2025/3416 K.</span>
+                            </div>
+                            <a href="blog-detail.html?id=2" class="blog-btn-modern">Kararı İncele</a>
+                        </div>
                     </div>
                 </article>
 
-                <!-- Blog Card 3 -->
-                <article class="blog-card">
-                    <a href="blog-detail.html" class="blog-image-link">
-                        <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="Gayrimenkul Alım-Satımı">
-                            <span class="blog-category-tag">Gayrimenkul Hukuku</span>
-                        </div>
-                    </a>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="far fa-calendar-alt"></i>
-                                08 Ocak 2024
-                            </span>
-                            <span class="blog-author">
-                                <i class="far fa-user"></i>
-                                Av. Mehmet Kaya
-                            </span>
-                        </div>
-                        <h2 class="blog-title">
-                            <a href="blog-detail.html">Gayrimenkul Alım-Satımında Hukuki Süreç ve Dikkat Edilecekler</a>
-                        </h2>
-                        <p class="blog-excerpt">
-                            Ev alırken veya satarken karşılaşabileceğiniz hukuki sorunlar ve bunlardan 
-                            nasıl korunabileceğiniz hakkında bilgiler.
+                <!-- Blog 3 -->
+                <article class="blog-card-modern">
+                    <span class="blog-badge-modern cat-icra">İcra ve İflas Hukuku</span>
+                    <div class="blog-body-modern">
+                        <h2 class="blog-title-modern">Kira Sözleşmesine İtiraz Etmeyen Borçlunun Durumu</h2>
+                        <p class="blog-excerpt-modern">
+                            Kira sözleşmesine itiraz etmeyen borçlu icra mahkemesinde itiraz sebepleri ile bağlıdır ve
+                            kira sözleşmesini inkar edemez.
                         </p>
-                        <a href="blog-detail.html" class="blog-read-more">
-                            Devamını Oku
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
+                        <div class="blog-footer-modern">
+                            <div class="blog-info-modern">
+                                <span><i class="far fa-calendar-alt"></i> 21 Ocak 2025</span>
+                                <span><i class="fas fa-file-invoice"></i> 12. HD 2024/8127 E., 2025/357 K.</span>
+                            </div>
+                            <a href="blog-detail.html?id=3" class="blog-btn-modern">Kararı İncele</a>
+                        </div>
                     </div>
                 </article>
 
-                <!-- Blog Card 4 -->
-                <article class="blog-card">
-                    <a href="blog-detail.html" class="blog-image-link">
-                        <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=800&q=80" alt="Ceza Davalarında Savunma">
-                            <span class="blog-category-tag">Ceza Hukuku</span>
-                        </div>
-                    </a>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="far fa-calendar-alt"></i>
-                                05 Ocak 2024
-                            </span>
-                            <span class="blog-author">
-                                <i class="far fa-user"></i>
-                                Av. Zeynep Arslan
-                            </span>
-                        </div>
-                        <h2 class="blog-title">
-                            <a href="blog-detail.html">Ceza Davalarında Savunma Stratejileri ve Müdafi Seçimi</a>
-                        </h2>
-                        <p class="blog-excerpt">
-                            Ceza davalarında etkili bir savunma için nelere dikkat etmelisiniz? 
-                            Doğru avukat seçimi ve süreç yönetimi ipuçları.
+                <!-- Blog 4 -->
+                <article class="blog-card-modern">
+                    <span class="blog-badge-modern cat-icra">İcra ve İflas Hukuku</span>
+                    <div class="blog-body-modern">
+                        <h2 class="blog-title-modern">Tahliye Taahütnamesine Dayalı İcra Takibi ve Görevli Mahkeme</h2>
+                        <p class="blog-excerpt-modern">
+                            Tahliye taahütnamesine dayanan icra takibi nedeniyle açılan itirazın iptali davasında
+                            görevli mahkeme sulh hukuk mahkemesidir.
                         </p>
-                        <a href="blog-detail.html" class="blog-read-more">
-                            Devamını Oku
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
+                        <div class="blog-footer-modern">
+                            <div class="blog-info-modern">
+                                <span><i class="far fa-calendar-alt"></i> 11 Şubat 2025</span>
+                                <span><i class="fas fa-file-invoice"></i> 3. HD 2024/3875 E., 2025/759 K.</span>
+                            </div>
+                            <a href="blog-detail.html?id=4" class="blog-btn-modern">Kararı İncele</a>
+                        </div>
                     </div>
                 </article>
 
-                <!-- Blog Card 5 -->
-                <article class="blog-card">
-                    <a href="blog-detail.html" class="blog-image-link">
-                        <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Şirket Kuruluşu">
-                            <span class="blog-category-tag">Ticaret Hukuku</span>
-                        </div>
-                    </a>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="far fa-calendar-alt"></i>
-                                02 Ocak 2024
-                            </span>
-                            <span class="blog-author">
-                                <i class="far fa-user"></i>
-                                Av. Can Öztürk
-                            </span>
-                        </div>
-                        <h2 class="blog-title">
-                            <a href="blog-detail.html">Şirket Kuruluşunda İzlenmesi Gereken Adımlar ve Prosedürler</a>
-                        </h2>
-                        <p class="blog-excerpt">
-                            Yeni bir şirket kurarken hangi adımları takip etmelisiniz? 
-                            Yasal prosedürler ve gerekli belgeler rehberi.
+                <!-- Blog 5 -->
+                <article class="blog-card-modern">
+                    <span class="blog-badge-modern cat-tasinmaz">Taşınmaz Hukuku</span>
+                    <div class="blog-body-modern">
+                        <h2 class="blog-title-modern">Satış Bedelinin Ödeme Şekli ve Hayatın Olağan Akışı</h2>
+                        <p class="blog-excerpt-modern">
+                            Satış bedelinin tapu işleminden önce başlamak üzere taksitler halinde ve elden paket halinde
+                            ödenmesi hayatın olağan akışına aykırılık teşkil eder.
                         </p>
-                        <a href="blog-detail.html" class="blog-read-more">
-                            Devamını Oku
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
+                        <div class="blog-footer-modern">
+                            <div class="blog-info-modern">
+                                <span><i class="far fa-calendar-alt"></i> 25 Ekim 2023</span>
+                                <span><i class="fas fa-file-invoice"></i> HGK 2021/482 E., 2023/992 K.</span>
+                            </div>
+                            <a href="blog-detail.html?id=5" class="blog-btn-modern">Kararı İncele</a>
+                        </div>
                     </div>
                 </article>
 
-                <!-- Blog Card 6 -->
-                <article class="blog-card">
-                    <a href="blog-detail.html" class="blog-image-link">
-                        <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="Yeni Kanun Değişiklikleri">
-                            <span class="blog-category-tag">Genel Hukuk</span>
-                        </div>
-                    </a>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="far fa-calendar-alt"></i>
-                                28 Aralık 2023
-                            </span>
-                            <span class="blog-author">
-                                <i class="far fa-user"></i>
-                                Av. Elif Şahin
-                            </span>
-                        </div>
-                        <h2 class="blog-title">
-                            <a href="blog-detail.html">2024 Yılında Yürürlüğe Giren Yeni Kanun Değişiklikleri</a>
-                        </h2>
-                        <p class="blog-excerpt">
-                            2024 yılı ile birlikte hayatımıza giren önemli kanun değişiklikleri ve 
-                            bu değişikliklerin üzerinize etkileri.
+                <!-- Blog 6 (Bonus) -->
+                <article class="blog-card-modern">
+                    <span class="blog-badge-modern cat-sigorta">Sigorta Hukuku</span>
+                    <div class="blog-body-modern">
+                        <h2 class="blog-title-modern">Motorlu Araçlar ZMM Sigortası ve Arabuluculuk</h2>
+                        <p class="blog-excerpt-modern">
+                            Motorlu araçlar ZMM sigortacısına karşı açılacak davalar arabuluculuk dava şartına tabi
+                            değildir.
                         </p>
-                        <a href="blog-detail.html" class="blog-read-more">
-                            Devamını Oku
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
+                        <div class="blog-footer-modern">
+                            <div class="blog-info-modern">
+                                <span><i class="far fa-calendar-alt"></i> 08 Mayıs 2024</span>
+                                <span><i class="fas fa-file-invoice"></i> 4. HD 2023/12689 E., 2024/4378 K.</span>
+                            </div>
+                            <a href="blog-detail.html?id=6" class="blog-btn-modern">Kararı İncele</a>
+                        </div>
                     </div>
                 </article>
             </div>
 
-            <!-- Pagination -->
-            <nav class="pagination" aria-label="Blog sayfalaması">
-                <a href="#" class="pagination-btn pagination-prev" aria-label="Önceki sayfa">
-                    <i class="fas fa-chevron-left"></i>
-                </a>
-                <a href="#" class="pagination-btn active" aria-current="page">1</a>
-                <a href="#" class="pagination-btn">2</a>
-                <a href="#" class="pagination-btn">3</a>
-                <a href="#" class="pagination-btn pagination-next" aria-label="Sonraki sayfa">
-                    <i class="fas fa-chevron-right"></i>
-                </a>
-            </nav>
+            <!-- Pagination Modern -->
+            <div class="pagination-modern">
+                <a href="#" class="page-link-modern" aria-label="Geri"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" class="page-link-modern active">1</a>
+                <a href="#" class="page-link-modern">2</a>
+                <a href="#" class="page-link-modern">3</a>
+                <a href="#" class="page-link-modern" aria-label="İleri"><i class="fas fa-chevron-right"></i></a>
+            </div>
         </div>
     </section>
 
     <!-- Call to Action -->
-    <section class="blog-cta">
+    <section class="cta-section">
+        <div class="cta-overlay"></div>
         <div class="container">
-            <div class="blog-cta-content">
-                <div class="blog-cta-icon">
-                    <i class="fas fa-balance-scale"></i>
-                </div>
-                <h2 class="blog-cta-title">Hukuki Sorularınız İçin Bizimle İletişime Geçin</h2>
-                <p class="blog-cta-text">
-                    Uzman avukat kadromuz, hukuki sorunlarınıza profesyonel çözümler sunmak için hazır.
+            <div class="cta-content">
+                <h2 class="cta-title">Hukuki Sorularınız İçin Bizimle İletişime Geçin</h2>
+                <p class="cta-text">
+                    Uzman avukat kadromuz, hukuki uyuşmazlıklarınızda profesyonel ve etkili çözümler sunmak için
+                    yanınızda.
                 </p>
-                <a href="iletisim.html" class="btn btn-cta">
-                    <i class="fas fa-phone-alt"></i>
-                    İletişime Geçin
-                </a>
+                <a href="iletisim.html" class="btn btn-gold">Şimdi Randevu Alın</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-main">
-            <div class="container">
+        <div class="container">
+            <div class="footer-content">
                 <div class="footer-grid">
                     <!-- Sütun 1: Logo ve Açıklama -->
                     <div class="footer-col">
                         <div class="footer-logo">
-                            <i class="fas fa-balance-scale"></i>
-                            <span>HUKUK & DANIŞMANLIK</span>
+                            <img src="hukuk-logo.jpeg" alt="Güzeler Hukuk Logo" class="logo-img">
+                            <span>GÜZELER HUKUK & DANIŞMANLIK</span>
                         </div>
                         <p class="footer-description">
-                            Profesyonel hukuki danışmanlık hizmetleriyle, 
-                            müvekkillerimizin haklarını korumak ve adaletin 
-                            tecellisi için çalışıyoruz.
+                            Profesyonel hukuki danışmanlık hizmetleriyle,
+                            haklarınızı koruyoruz ve adaletin yanındayız.
                         </p>
                         <div class="footer-social">
-                            <a href="#" class="footer-social-link" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="footer-social-link" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="footer-social-link" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="footer-social-link" title="Twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
 
@@ -357,81 +260,59 @@
                     <div class="footer-col">
                         <h3 class="footer-title">Hızlı Linkler</h3>
                         <ul class="footer-links">
-                            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Anasayfa</a></li>
-                            <li><a href="hakkimizda.html"><i class="fas fa-chevron-right"></i> Hakkımızda</a></li>
-                            <li><a href="hizmetler.html"><i class="fas fa-chevron-right"></i> Hizmetlerimiz</a></li>
-                            <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
-                            <li><a href="iletisim.html"><i class="fas fa-chevron-right"></i> İletişim</a></li>
+                            <li><a href="index.html">Anasayfa</a></li>
+                            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                            <li><a href="hizmetler.html">Hizmetler</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="iletisim.html">İletişim</a></li>
                         </ul>
                     </div>
 
-                    <!-- Sütun 3: Son Blog Yazıları -->
+                    <!-- Sütun 3: Hizmetler -->
                     <div class="footer-col">
-                        <h3 class="footer-title">Son Blog Yazıları</h3>
-                        <ul class="footer-posts">
-                            <li>
-                                <a href="blog.html">
-                                    <i class="far fa-newspaper"></i>
-                                    <span>Boşanma Davalarında Nafaka Hakları</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="blog.html">
-                                    <i class="far fa-newspaper"></i>
-                                    <span>İş Sözleşmelerinde Dikkat Edilmesi Gerekenler</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="blog.html">
-                                    <i class="far fa-newspaper"></i>
-                                    <span>Gayrimenkul Alım-Satımında Hukuki Süreç</span>
-                                </a>
-                            </li>
+                        <h3 class="footer-title">Hizmetlerimiz</h3>
+                        <ul class="footer-links">
+                            <li><a href="hizmetler.html#aile-hukuku">Aile Hukuku</a></li>
+                            <li><a href="hizmetler.html#ceza-hukuku">Ceza Hukuku</a></li>
+                            <li><a href="hizmetler.html#is-hukuku">İş Hukuku</a></li>
+                            <li><a href="hizmetler.html#ticaret-hukuku">Ticaret Hukuku</a></li>
+                            <li><a href="hizmetler.html#gayrimenkul">Gayrimenkul Hukuku</a></li>
                         </ul>
                     </div>
 
-                    <!-- Sütun 4: İletişim Bilgileri -->
+                    <!-- Sütun 4: İletişim -->
                     <div class="footer-col">
-                        <h3 class="footer-title">İletişim Bilgileri</h3>
+                        <h3 class="footer-title">İletişim</h3>
                         <ul class="footer-contact">
                             <li>
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span>Levent Mahallesi, Meltem Sokak No:15/4<br>Beşiktaş, İstanbul</span>
+                                <span>Örnek Mahallesi, Hukuk Caddesi No:123<br>Çankaya/Ankara</span>
                             </li>
                             <li>
                                 <i class="fas fa-phone"></i>
-                                <span>+90 (212) 555 12 34</span>
+                                <span>+90 (312) 123 45 67</span>
                             </li>
                             <li>
                                 <i class="fas fa-envelope"></i>
-                                <span>info@hukukofisi.com</span>
+                                <span>info@guzelerhukuk.com</span>
                             </li>
                             <li>
                                 <i class="fas fa-clock"></i>
-                                <span>Pzt-Cuma: 09:00 - 18:00<br>Cumartesi: 10:00 - 16:00</span>
+                                <span>Pzt-Cum: 09:00 - 18:00</span>
                             </li>
                         </ul>
                     </div>
                 </div>
-            </div>
-        </div>
-        
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2024 Hukuk & Danışmanlık Ofisi. Tüm hakları saklıdır.</p>
-                    <div class="footer-bottom-links">
-                        <a href="#">Gizlilik Politikası</a>
-                        <span>|</span>
-                        <a href="#">Kullanım Koşulları</a>
-                    </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Güzeler Hukuk & Danışmanlık. Tüm hakları saklıdır.</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -351,3 +351,263 @@ if (mainNav) {
         }
     });
 }
+
+// ==================== MISSION VISION INTERACTIVE FEATURES ====================
+(function() {
+    'use strict';
+
+    // Mobil kontrolü
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // ==================== CUSTOM CURSOR ====================
+    if (!isMobile && !prefersReducedMotion) {
+        const customCursor = document.querySelector('.custom-cursor');
+        const missionVisionArea = document.querySelector('.mission-vision-area');
+        
+        if (customCursor && missionVisionArea) {
+            let cursorX = 0;
+            let cursorY = 0;
+            let currentX = 0;
+            let currentY = 0;
+            let isInArea = false;
+
+            // Smooth cursor hareketi için requestAnimationFrame
+            function updateCursorPosition() {
+                if (isInArea) {
+                    // Yumuşak geçiş için lerp (linear interpolation)
+                    const speed = 0.15;
+                    currentX += (cursorX - currentX) * speed;
+                    currentY += (cursorY - currentY) * speed;
+                    
+                    customCursor.style.left = currentX + 'px';
+                    customCursor.style.top = currentY + 'px';
+                }
+                
+                requestAnimationFrame(updateCursorPosition);
+            }
+
+            // Mouse hareket takibi
+            missionVisionArea.addEventListener('mousemove', (e) => {
+                cursorX = e.clientX;
+                cursorY = e.clientY;
+            });
+
+            // Alan içine girme
+            missionVisionArea.addEventListener('mouseenter', () => {
+                isInArea = true;
+                customCursor.classList.add('visible');
+            });
+
+            // Alan dışına çıkma
+            missionVisionArea.addEventListener('mouseleave', () => {
+                isInArea = false;
+                customCursor.classList.remove('visible');
+                customCursor.classList.remove('hover');
+            });
+
+            // Hover efekti için clickable elementler
+            const hoverElements = missionVisionArea.querySelectorAll(
+                '.highlight-text, .card-title, .card-icon, .mission-card, .vision-card'
+            );
+
+            hoverElements.forEach(element => {
+                element.addEventListener('mouseenter', () => {
+                    customCursor.classList.add('hover');
+                });
+
+                element.addEventListener('mouseleave', () => {
+                    customCursor.classList.remove('hover');
+                });
+            });
+
+            // Animasyonu başlat
+            updateCursorPosition();
+        }
+    }
+
+    // ==================== TYPEWRITER ANIMATION ====================
+    let typewritersInitialized = false; // Sadece bir kez çalışsın
+    
+    class TypeWriter {
+        constructor(element, text, speed = 100, blinkDuration = 2500) {
+            this.element = element;
+            this.text = text;
+            this.speed = speed;
+            this.blinkDuration = blinkDuration;
+            this.currentIndex = 0;
+        }
+
+        type() {
+            return new Promise((resolve) => {
+                // Element zaten yazılmışsa tekrar yazma
+                if (this.element.classList.contains('typed-complete')) {
+                    resolve();
+                    return;
+                }
+                
+                this.element.classList.add('typing');
+                this.element.textContent = '';
+
+                const typeInterval = setInterval(() => {
+                    if (this.currentIndex < this.text.length) {
+                        this.element.textContent += this.text.charAt(this.currentIndex);
+                        this.currentIndex++;
+                    } else {
+                        clearInterval(typeInterval);
+                        
+                        // Yanıp sönen cursor'ı göster
+                        setTimeout(() => {
+                            this.element.classList.remove('typing');
+                            this.element.classList.add('typed-complete');
+                            this.element.textContent = this.text;
+                            resolve();
+                        }, this.blinkDuration);
+                    }
+                }, this.speed);
+            });
+        }
+    }
+
+    // Typewriter başlatma
+    function initTypewriters() {
+        // Eğer zaten başlatıldıysa tekrar başlatma
+        if (typewritersInitialized) {
+            return;
+        }
+        
+        if (prefersReducedMotion) {
+            // Reduced motion tercih ediliyorsa doğrudan metni göster
+            const typewriterElements = document.querySelectorAll('.typewriter');
+            typewriterElements.forEach(element => {
+                element.textContent = element.getAttribute('data-text');
+                element.classList.add('typed-complete');
+            });
+            typewritersInitialized = true;
+            return;
+        }
+
+        const typewriterElements = document.querySelectorAll('.typewriter');
+        
+        if (typewriterElements.length === 0) {
+            return;
+        }
+        
+        typewritersInitialized = true;
+        const typewriterPromises = [];
+
+        typewriterElements.forEach((element, index) => {
+            const text = element.getAttribute('data-text');
+            if (text && !element.classList.contains('typed-complete')) {
+                // Her başlık için küçük bir gecikme ekle
+                const delay = index * 400;
+                
+                const promise = new Promise((resolve) => {
+                    setTimeout(() => {
+                        const typewriter = new TypeWriter(element, text, 90, 2000);
+                        typewriter.type().then(resolve);
+                    }, delay);
+                });
+
+                typewriterPromises.push(promise);
+            }
+        });
+
+        return Promise.all(typewriterPromises);
+    }
+
+    // ==================== HIGHLIGHT TEXT EFFECTS ====================
+    function initHighlightEffects() {
+        const highlightTexts = document.querySelectorAll('.highlight-text');
+        
+        highlightTexts.forEach(text => {
+            // Accessibility için focus efekti
+            text.setAttribute('tabindex', '0');
+            
+            // Keyboard navigation desteği
+            text.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    text.classList.toggle('active');
+                }
+            });
+        });
+    }
+
+    // ==================== INTERSECTION OBSERVER (Performance) ====================
+    function initIntersectionObserver() {
+        const cards = document.querySelectorAll('.mission-card, .vision-card');
+        
+        if (cards.length === 0) return;
+        
+        const observerOptions = {
+            root: null,
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        cards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            cardObserver.observe(card);
+        });
+    }
+
+    // ==================== INITIALIZATION ====================
+    function init() {
+        // Typewriter elementleri var mı kontrol et
+        const hasTypewriterElements = document.querySelector('.typewriter') !== null;
+        
+        if (!hasTypewriterElements) {
+            return; // Sayfa üzerinde typewriter elementi yoksa çalıştırma
+        }
+        
+        // Sayfa tamamen yüklendiğinde bir kez çalıştır
+        if (document.readyState === 'complete') {
+            // Sayfa zaten yüklendiyse hemen başlat
+            setTimeout(() => {
+                initTypewriters();
+                initHighlightEffects();
+                initIntersectionObserver();
+            }, 300);
+        } else {
+            // Sayfa henüz yüklenmediyse bekle
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    initTypewriters();
+                    initHighlightEffects();
+                    initIntersectionObserver();
+                }, 300);
+            }, { once: true }); // once: true ile sadece bir kez çalışır
+        }
+    }
+
+    // Scripti başlat
+    init();
+
+    // ==================== RESIZE HANDLER ====================
+    let resizeTimerMission;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimerMission);
+        resizeTimerMission = setTimeout(() => {
+            // Resize sonrası mobil kontrolü
+            const newIsMobile = window.matchMedia('(max-width: 768px)').matches;
+            if (newIsMobile) {
+                const customCursor = document.querySelector('.custom-cursor');
+                if (customCursor) {
+                    customCursor.style.display = 'none';
+                }
+            }
+        }, 250);
+    });
+
+})();
